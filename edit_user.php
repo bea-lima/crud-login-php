@@ -34,7 +34,8 @@
           </div><br><br>
           <input type="hidden" name="id" required value="<?php echo $row[0]; ?>">
           <button type="submit" class="btn btn-default">Edit</button>
-        </form>
+          <button type="button" class="btn btn-default" onclick="location.href = 'user.html';">Go back</button>
+        </form> 
      </div>
   </body>
 </html>
