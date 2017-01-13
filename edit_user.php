@@ -5,7 +5,16 @@
 
   $result = db_query("SELECT id, name,email,password FROM user WHERE email = '$email'");
 
-  $row=mysqli_fetch_row($result);
+  if($result->num_rows > 0){
+    $row=mysqli_fetch_row($result);
+  }else{
+   ?>
+   <script>
+     alert("User not found.");
+     window.location="user.html";
+   </script>
+   <?php 
+  }
 ?>
 <!DOCTYPE html>
 <html>
